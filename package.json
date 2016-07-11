@@ -1,0 +1,26 @@
+{
+  "name": "Travox_Mid-BackOffice",
+  "private": true,
+  "dependencies": {
+    "better-console": "^0.2.4",
+    "bufferutil": "^1.2.1",
+    "clipboard": "^1.5.10",
+    "counterpart": "^0.17.2",
+    "del": "^2.2.0",
+    "gridfs-stream": "^1.1.1",
+    "map-stream": "0.0.6",
+    "marked": "^0.3.5",
+    "md5": "^2.1.0",
+    "meteor-node-stubs": "^0.2.3",
+    "moment": "^2.13.0",
+    "mongoose": "^4.4.20",
+    "push.js": "0.0.7",
+    "q": "^1.4.1",
+    "socket.io": "^1.4.6",
+    "socket.io-client": "^1.4.6",
+    "utf-8-validate": "^1.2.1"
+  },
+  "scripts": {
+    "start": "meteor --port 8081"
+  }
+}
