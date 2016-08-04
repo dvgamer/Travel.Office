@@ -11,12 +11,14 @@ import './account';
 FlowRouter.route('/', {
   name: 'main',
   action:function() {
+    Session.set('config.title', null);
 		BlazeLayout.render('welcome');
   }
 });
  
 FlowRouter.notFound = {
   action:function() {
+    Session.set('config.title', 'NotFound');
   	if(Meteor) {
   		BlazeLayout.render('app-error');
   	} else {

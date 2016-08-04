@@ -6,6 +6,7 @@ import '../imports/language';
 import '../imports/layout';
 import '../imports/router';
 
+
 const Q 			= require('q');
 
 let SignalConnected = true;
@@ -20,6 +21,7 @@ const IdSignal = function(){
 		SignalConnected = io.connected;
 	}
 }
+const ProjectName = 'MidBack Office™';
 
 Meteor.setInterval(IdSignal, 3000);
 
@@ -30,7 +32,7 @@ Session.setDefault('session.id', null);
 Session.setDefault('session.client', null);
  
 Tracker.autorun(function (c) {
-  document.title = `${Session.get('config.title') ? `${Session.get('config.title')} - ` : ``}Midback Office™`;
+  document.title = `${Session.get('config.title') ? `${Session.get('config.title')} - ` : `Travox ` }${ProjectName}`;
   // c.stop();
 })
 
