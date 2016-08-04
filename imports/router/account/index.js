@@ -4,7 +4,7 @@ import { Session } from 'meteor/session';
 import { Meteor } from 'meteor/meteor';
 
 var account = FlowRouter.group({
-  prefix: '/accounting',
+  prefix: '/Accounting',
   action: function(){
   }
 });
@@ -14,7 +14,7 @@ account.route('/', {
   action:function() {
   	Session.set('config.title', 'Accounting');
   	if(Meteor) {
-  		BlazeLayout.render('app');
+      BlazeLayout.render('app', { main: 'account' });
   	} else {
   		BlazeLayout.render('welcome');
   	}

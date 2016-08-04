@@ -16,7 +16,7 @@ admin.route('/', {
   action:function() {
   	Session.set('config.title', 'Administrator');
   	if(Meteor) {
-  		BlazeLayout.render('app');
+      BlazeLayout.render('app', { main: 'admin' });
   	} else {
   		BlazeLayout.render('welcome');
   	}

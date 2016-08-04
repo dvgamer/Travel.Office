@@ -1,15 +1,15 @@
 <template name="app">
+<div class="panel">
 	<div class="ui two column stackable grid container">
 	  <div class="column">
 	  </div>
-	  <div class="column app menu">
+	  <div class="computer tablet only column app menu">
   		{{> mainmenu}}
 	  </div>
 	</div>
   {{> Template.dynamic template=navigator }}
 	<div class="ui column grid container">
-	  <div class="column">
-      {{> Template.dynamic template=board }}
-	  </div>
+      {{> Template.dynamic template=main }}
 	</div>
+</div>
 </template>  

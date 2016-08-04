@@ -11,20 +11,16 @@ import './account';
 FlowRouter.route('/', {
   name: 'main',
   action:function() {
-  	if(Meteor) {
-  		BlazeLayout.render('app');
-  	} else {
-  		BlazeLayout.render('welcome');
-  	}
+		BlazeLayout.render('welcome');
   }
 });
  
 FlowRouter.notFound = {
   action:function() {
   	if(Meteor) {
-  		BlazeLayout.render('app');
+  		BlazeLayout.render('app-error');
   	} else {
-  		BlazeLayout.render('welcome');
+  		BlazeLayout.render('error');
   	}
   },
 };

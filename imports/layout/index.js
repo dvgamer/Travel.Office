@@ -1,3 +1,5 @@
+import './welcome.js'
+
 import './app.js'
 import './modules/mainmenu.js';
 

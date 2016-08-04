@@ -7,7 +7,7 @@ let counterpart = new localization.Instance();
 module.exports = function(template_name){
 	let language = {}
 
-	switch(Session.get('LANGUAGE') || 'en-EN') {
+	switch(Session.get('config.language') || 'en-EN') {
 		case 'en-EN': counterpart.registerTranslations('en', require('./en-EN.js')); break;
 		// case 'th-TH': language = require('./th-TH.js'); break;
 	}

@@ -4,7 +4,7 @@ import { Session } from 'meteor/session';
 import { Meteor } from 'meteor/meteor';
 
 var reservation = FlowRouter.group({
-  prefix: '/reservation',
+  prefix: '/Reservation',
   action: function(){
     
   }
@@ -15,7 +15,7 @@ reservation.route('/', {
   action:function() {
   	Session.set('config.title', 'Reservation');
   	if(Meteor) {
-  		BlazeLayout.render('app');
+  		BlazeLayout.render('app', { main: 'reservation' });
   	} else {
   		BlazeLayout.render('welcome');
   	}

@@ -1,6 +1,6 @@
 module.exports = {
 	'mainmenu': {
-		'ACCOUNT'					:'ACCOUNT',
+		'ACCOUNT'					:'ACCOUNTING',
 		'RESERVATION'			:'RESERVATION'
 	}
 }
