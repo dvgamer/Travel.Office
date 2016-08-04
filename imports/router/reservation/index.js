@@ -3,14 +3,17 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import { Session } from 'meteor/session';
 import { Meteor } from 'meteor/meteor';
 
-import './admin';
+var reservation = FlowRouter.group({
+  prefix: '/reservation',
+  action: function(){
+    
+  }
+});
 
-import './reservation';
-import './account';
-
-FlowRouter.route('/', {
-  name: 'main',
+reservation.route('/', {
+	name: 'reservation',
   action:function() {
+  	Session.set('config.title', 'Reservation');
   	if(Meteor) {
   		BlazeLayout.render('app');
   	} else {
@@ -18,13 +21,3 @@ FlowRouter.route('/', {
   	}
   }
 });
- 
-FlowRouter.notFound = {
-  action:function() {
-  	if(Meteor) {
-  		BlazeLayout.render('app');
-  	} else {
-  		BlazeLayout.render('welcome');
-  	}
-  },
-};

@@ -1,16 +1,16 @@
 import { Meteor } from 'meteor/meteor';
 import { Session }  from 'meteor/session';
+import { Tracker }  from 'meteor/tracker';
 
 import '../imports/language';
 import '../imports/layout';
 import '../imports/router';
-import '../imports/stylesheet'; 
 
 const Q 			= require('q');
 
 let SignalConnected = true;
 const IdSignal = function(){
-	let io = Meteor.status();
+	let io = Meteor.status();  
 	if(SignalConnected != io.connected) {
 		if(io.connected) {
 			// hide preload
@@ -23,14 +23,19 @@ const IdSignal = function(){
 
 Meteor.setInterval(IdSignal, 3000);
 
-Session.setDefault('config.title', 'Administrator');
+Session.setDefault('config.title', null);
 
 Session.setDefault('session.time', 0);
 Session.setDefault('session.id', null);
 Session.setDefault('session.client', null);
  
+Tracker.autorun(function (c) {
+  document.title = `${Session.get('config.title') ? `${Session.get('config.title')} - ` : ``}Midback Office™`;
+  // c.stop();
+})
+
 Meteor.startup(() => {
-	document.title = `${Session.get('config.title') ? `${Session.get('config.title')} - ` : ``}Midback Office™`;;
+	
 });
 
 

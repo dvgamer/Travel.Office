@@ -1,0 +1,32 @@
+ /*******************************
+    User Variable Overrides
+*******************************/
+
+.grid.container {
+	>.column { 
+		&.app.menu{
+			text-align: right;
+			li {
+		    padding: 0.3em 0em;
+		    display: inline-block;
+		    cursor: pointer;
+		    &.active {
+			    background-color: #6cb126;
+			    border-radius: 0px 0px 5px 5px;
+					>a {
+			    	color: #FFF;
+					}
+
+		    }
+				>a {
+			    font-weight: bold;
+			    padding: 0em 1.7em;;
+			    font-size: 1rem;
+			    text-align: center;
+			    color: #404040;
+				}
+
+			}
+		}
+	}
+}
