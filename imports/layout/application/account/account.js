@@ -1,20 +1,20 @@
-import './mainmenu.html';
+import './account.html';
 
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
-require('/imports/language')('mainmenu');
+require('/imports/language')('account');
 
-Template.mainmenu.onCreated(() => {
+Template.account.onCreated(() => {
   // counter starts at 0
   
 });
-Template.mainmenu.onRendered(() => {
+
+Template.account.onRendered(() => {
   $('.app.menu>li').removeClass('active');
-  // this.$('.group').addClass('active');
-  
+	$('.app.menu>li.account').addClass('active');
 });
 
 // Template.mainmenu.events({
@@ -31,3 +31,8 @@ Template.mainmenu.onRendered(() => {
 //   	$(e.currentTarget).addClass('active');
 //   },
 // });
+
+
+
+
+

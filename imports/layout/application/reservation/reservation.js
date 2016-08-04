@@ -1,20 +1,20 @@
-import './mainmenu.html';
+import './reservation.html';
 
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
-require('/imports/language')('mainmenu');
+require('/imports/language')('reservation');
 
-Template.mainmenu.onCreated(() => {
+Template.reservation.onCreated(() => {
   // counter starts at 0
   
 });
-Template.mainmenu.onRendered(() => {
+
+Template.reservation.onRendered(() => {
   $('.app.menu>li').removeClass('active');
-  // this.$('.group').addClass('active');
-  
+	$('.app.menu>li.reservation').addClass('active');
 });
 
 // Template.mainmenu.events({
@@ -26,8 +26,13 @@ Template.mainmenu.onRendered(() => {
 //   	$('.app.menu>li').removeClass('active');
 //   	$(e.currentTarget).addClass('active');
 //   },
-//   'click .account': (e, instance) => {
+//   'click .reservation': (e, instance) => {
 //   	$('.app.menu>li').removeClass('active');
 //   	$(e.currentTarget).addClass('active');
 //   },
 // });
+
+
+
+
+

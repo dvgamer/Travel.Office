@@ -6,5 +6,10 @@
   		{{> mainmenu}}
 	  </div>
 	</div>
-
+  {{> Template.dynamic template=navigator }}
+	<div class="ui column grid container">
+	  <div class="column">
+      {{> Template.dynamic template=board }}
+	  </div>
+	</div>
 </template>  
