@@ -12,10 +12,38 @@ FlowRouter.route('/', {
   name: 'main',
   action:function() {
     Session.set('config.title', null);
-		BlazeLayout.render('welcome');
+    BlazeLayout.render('introduce');
   }
 });
  
+
+FlowRouter.route('/Feature', {
+  name: 'feature',
+  action:function() {
+    Session.set('config.title',  );
+    BlazeLayout.render('introduce');
+  }
+});
+ 
+
+FlowRouter.route('/Pricing', {
+  name: 'pricing',
+  action:function() {
+    Session.set('config.title', null);
+    BlazeLayout.render('introduce');
+  }
+});
+
+FlowRouter.route('/Pricing/Order', {
+  name: 'order',
+  action:function() {
+    Session.set('config.title', null);
+    BlazeLayout.render('introduce');
+  }
+});
+ 
+
+
 FlowRouter.notFound = {
   action:function() {
     Session.set('config.title', 'NotFound');

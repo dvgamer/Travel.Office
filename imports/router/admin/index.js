@@ -18,7 +18,7 @@ admin.route('/', {
   	if(Meteor) {
       BlazeLayout.render('app', { main: 'admin' });
   	} else {
-  		BlazeLayout.render('welcome');
+  		BlazeLayout.render('introduce');
   	}
   }
 });

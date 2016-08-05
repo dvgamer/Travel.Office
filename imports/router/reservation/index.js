@@ -16,8 +16,6 @@ reservation.route('/', {
   	Session.set('config.title', 'Reservation');
   	if(Meteor) {
   		BlazeLayout.render('app', { main: 'reservation' });
-  	} else {
-  		BlazeLayout.render('welcome');
   	}
   }
 });

@@ -16,7 +16,7 @@ account.route('/', {
   	if(Meteor) {
       BlazeLayout.render('app', { main: 'account' });
   	} else {
-  		BlazeLayout.render('welcome');
+  		BlazeLayout.render('introduce');
   	}
   }
 });
