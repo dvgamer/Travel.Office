@@ -28,12 +28,12 @@ FlowRouter.route('/Feature', {
 
 FlowRouter.route('/Pricing', {
   name: 'pricing',
-  action:function() {
+  action:function() { 
     Session.set('config.title', null);
     BlazeLayout.render('introduce');
   }
 });
-
+ 
 FlowRouter.route('/Pricing/Order', {
   name: 'order',
   action:function() {
