@@ -12,16 +12,16 @@ FlowRouter.route('/', {
   name: 'main',
   action:function() {
     Session.set('config.title', null);
-    BlazeLayout.render('introduce');
+    BlazeLayout.render('introduce', { panel: 'tour' });
   }
 });
  
 
-FlowRouter.route('/Feature', {
-  name: 'feature',
+FlowRouter.route('/Our-Customer', {
+  name: 'customer',
   action:function() {
-    Session.set('config.title',  );
-    BlazeLayout.render('introduce');
+    Session.set('config.title', null);
+    BlazeLayout.render('introduce', { panel: 'customer' });
   }
 });
  
@@ -30,15 +30,15 @@ FlowRouter.route('/Pricing', {
   name: 'pricing',
   action:function() { 
     Session.set('config.title', null);
-    BlazeLayout.render('introduce');
+    BlazeLayout.render('introduce', { panel: 'pricing' });
   }
 });
  
-FlowRouter.route('/Pricing/Order', {
-  name: 'order',
+FlowRouter.route('/Contact-us', {
+  name: 'us',
   action:function() {
     Session.set('config.title', null);
-    BlazeLayout.render('introduce');
+    BlazeLayout.render('introduce', { panel: 'contact' });
   }
 });
  

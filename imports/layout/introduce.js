@@ -7,9 +7,14 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 // require('/imports/language')('error');
 
-Template.introduce.onCreated(function helloOnCreated() {
+Template.introduce.onCreated(function() {
 
 });
+
+Template.introduce.onRendered(function() {
+
+});
+
 
 // Template.introduce.helpers({
 //   counter: () => {
@@ -17,9 +22,8 @@ Template.introduce.onCreated(function helloOnCreated() {
 //   },
 // });
 
-// Template.introduce.events({
-//   'click button': (event, instance) => {
-//     // increment the counter when button is clicked
-//     instance.counter.set(instance.counter.get() + 1);
-//   },
-// });
+Template.introduce.events({
+  'click #titleBar>.toggle': (e, instance) => {
+		$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
+  },
+});

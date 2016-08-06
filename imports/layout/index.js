@@ -1,4 +1,5 @@
 import './introduce.js'
+import './welcome'
 
 import './app.js'
 import './modules/mainmenu.js';
