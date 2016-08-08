@@ -13,6 +13,6 @@ Template.pricing.onCreated(() => {
 });
 
 Template.pricing.onRendered(() => {
-  $('.app.menu>li').removeClass('active');
-	$('.app.menu>li.pricing').addClass('active');
+	$('.welcome.menu > .item').removeClass('active');
+	$('.welcome.menu > .item.pricing').addClass('active');
 });

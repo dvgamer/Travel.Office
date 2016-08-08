@@ -13,6 +13,5 @@ Template.contact.onCreated(() => {
 });
 
 Template.contact.onRendered(() => {
-  $('.app.menu>li').removeClass('active');
-	$('.app.menu>li.contact').addClass('active');
+
 });

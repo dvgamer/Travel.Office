@@ -14,6 +14,6 @@ signin.route('/', {
 	name: 'reservation',
   action:function() {
   	Session.set('config.title', 'Sign-In Customer');
-		BlazeLayout.render('app', { main: 'signin' });
+		BlazeLayout.render('app', { user: 'signin' });
   }
 });

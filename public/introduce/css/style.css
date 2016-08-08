@@ -251,6 +251,8 @@
 /* Header                                                                        */
 /*********************************************************************************/
 
+
+
 	#header
 	{
   	padding-top: 2.6em;
@@ -266,6 +268,14 @@
     text-transform: uppercase;
     color:#FFF;
 	}
+	#header .ui.secondary.menu .signin.item a {
+    color: #FFF;
+    margin: 0em 1em;
+	}
+	#header .ui.secondary.menu .signin.item a:hover {
+    color: #FFF;
+	}
+
 
 		#header:before
 		{

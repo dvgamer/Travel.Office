@@ -13,6 +13,6 @@ Template.customer.onCreated(() => {
 });
 
 Template.customer.onRendered(() => {
-  $('.app.menu>li').removeClass('active');
-	$('.app.menu>li.customer').addClass('active');
+	$('.welcome.menu > .item').removeClass('active');
+	$('.welcome.menu > .item.customer').addClass('active');
 });

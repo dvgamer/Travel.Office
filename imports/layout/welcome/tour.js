@@ -13,6 +13,6 @@ Template.tour.onCreated(() => {
 });
 
 Template.tour.onRendered(() => {
-  $('.app.menu>li').removeClass('active');
-	$('.app.menu>li.tour').addClass('active');
+	$('.welcome.menu > .item').removeClass('active');
+	$('.welcome.menu > .item.tour').addClass('active');
 });

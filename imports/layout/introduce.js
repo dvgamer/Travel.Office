@@ -36,20 +36,14 @@ Template.introduce.events({
     $('.ui.sidebar').sidebar('toggle');
   },
   'click .welcome.menu > .item.tour': () => {
-  	$('.welcome.menu > .item').removeClass('active');
-  	$('.welcome.menu > .item.tour').addClass('active');
     FlowRouter.go('tour');
 
   },
   'click .welcome.menu > .item.customer': () => {
-  	$('.welcome.menu > .item').removeClass('active');
-  	$('.welcome.menu > .item.customer').addClass('active');
     FlowRouter.go('customer');
 
   },
   'click .welcome.menu > .item.pricing': () => {
-    $('.welcome.menu > .item').removeClass('active');
-    $('.welcome.menu > .item.pricing').addClass('active');
     FlowRouter.go('pricing');
   }
 });
