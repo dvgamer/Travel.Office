@@ -9,7 +9,7 @@ import './reservation';
 import './account';
 
 FlowRouter.route('/', {
-  name: 'main',
+  name: 'tour',
   action:function() {
     Session.set('config.title', null);
     BlazeLayout.render('introduce', { panel: 'tour' });

@@ -12,7 +12,13 @@ Template.introduce.onCreated(function() {
 });
 
 Template.introduce.onRendered(function() {
-
+	$('.ui.sidebar').sidebar({
+		duration: 2000,
+		defaultTransition: {
+		  computer: { left   : 'overlay' },
+		  mobile: { left   : 'overlay' }
+		}
+	});
 });
 
 
@@ -24,6 +30,26 @@ Template.introduce.onRendered(function() {
 
 Template.introduce.events({
   'click #titleBar>.toggle': (e, instance) => {
-		$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
+		$('.ui.sidebar').sidebar('toggle');
   },
+  'click .sidebar.menu > .item': () => {
+    $('.ui.sidebar').sidebar('toggle');
+  },
+  'click .welcome.menu > .item.tour': () => {
+  	$('.welcome.menu > .item').removeClass('active');
+  	$('.welcome.menu > .item.tour').addClass('active');
+    FlowRouter.go('tour');
+
+  },
+  'click .welcome.menu > .item.customer': () => {
+  	$('.welcome.menu > .item').removeClass('active');
+  	$('.welcome.menu > .item.customer').addClass('active');
+    FlowRouter.go('customer');
+
+  },
+  'click .welcome.menu > .item.pricing': () => {
+    $('.welcome.menu > .item').removeClass('active');
+    $('.welcome.menu > .item.pricing').addClass('active');
+    FlowRouter.go('pricing');
+  }
 });

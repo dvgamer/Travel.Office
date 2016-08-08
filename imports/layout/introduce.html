@@ -1,26 +1,26 @@
 <template name="introduce">
 				
 	<!-- titleBar -->
-	<div class="mobile only sixteen wide column">
-
-	
-		<div id="titleBar">
-			<span class="toggle" style="cursor: pointer;"></span>
-			<span class="title" data-action="copyHTML" data-args="logo">
-				<h1><a href="/Sign-In">Sign-In</a></h1>
-			</span>
+	<div class="ui grid">
+		<div class="mobile only sixteen wide column">
+			<div id="titleBar">
+				<span class="toggle" style="cursor: pointer;"></span>
+				<span class="title" data-args="logo">
+					<h1><a href="/Sign-In">Sign-In</a></h1>
+				</span>
+			</div>
 		</div>
 	</div>
 
-  <div class="ui sidebar inverted vertical menu" style="margin-top: 44px !important;">
-    <a class="item">
-      1
+  <div class="ui sidebar inverted vertical welcome menu" style="margin-top: 44px !important;">
+    <a class="item active tour">
+      Tour
     </a>
-    <a class="item">
-      2
+    <a class="item customer">
+      Our customers
     </a>
-    <a class="item">
-      3
+    <a class="item pricing">
+      Pricing
     </a>
   </div>
 	<div class="pusher">
@@ -29,14 +29,14 @@
 			<div class="ui grid container"> 
 				<!-- Nav -->
 				<div class="sixteen wide computer tablet only column">
-					<div class="ui secondary menu" style="margin-top: 1.6em;">
-					  <a class="item active" href="/">
+					<div class="ui secondary welcome menu">
+					  <a class="item tour active">
 					    Tour
 					  </a>
-					  <a class="item" href="/Our-Customer">
+					  <a class="item customer">
 					    Our customers
 					  </a>
-					  <a class="item" href="/Pricing">
+					  <a class="item pricing">
 					    Pricing
 					  </a>
 					  <div class="right menu">
