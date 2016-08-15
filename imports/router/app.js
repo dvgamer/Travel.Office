@@ -8,8 +8,19 @@ import './admin';
 import './reservation';
 import './account';
 
+
+const trackRouteEntry = function(){
+  $('#main').fadeIn(1000);
+}
+const trackRouteClose = function(){
+  $('#main').fadeOut(1000);
+}
+
+
 FlowRouter.route('/', {
   name: 'tour',
+  triggersEnter: [trackRouteEntry],
+  triggersExit: [trackRouteClose],
   action:function() {
     Session.set('config.title', null);
     BlazeLayout.render('introduce', { panel: 'tour' });
