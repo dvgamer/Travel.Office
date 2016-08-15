@@ -6,24 +6,22 @@
 			</div>
 		</div>
 		<div class="ui stackable four column grid container"> 
-
-			<div class="column">
+      {{#each ref}}
+			<div class="column customers">
 				<div class="ui comments">
-					<a href="#" class="image full"><img src="introduce/images/" alt=""></a>
 				  <div class="comment">
-	 			    <div class="content">
-				      <a class="author">Joe Henderson</a>
-				      <div class="metadata">
-				        <div class="date">1 day ago</div>
-				      </div>
+						<a href="{{url}}" target="_blank" class="image"><img src="introduce/images/{{ImgNone logo}}" alt="{{name}}"></a>
+				    <div class="content">
+				      <a href="{{url}}" target="_blank" class="author">{{name}}</a>
+			        <div class="join date">Join on {{created}}</div>
 				      <div class="text">
-				        <p></p>
+				        <q>{{comment}}</q>
 				      </div>
 				    </div>
 				  </div> 
 			  </div> 
 			</div>	
-
+      {{/each}}
 		</div>
 	</div>
 </template>

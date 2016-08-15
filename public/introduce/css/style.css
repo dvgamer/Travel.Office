@@ -212,7 +212,7 @@
 
 	ul.contact
 	{
-		padding: 1.5em 0 2em 0;
+		padding: 2.5em 0 3em 0;
 		list-style: none;
 		cursor: default;
 	}
@@ -251,7 +251,7 @@
 /* Header                                                                        */
 /*********************************************************************************/
 
-
+	
 
 	#header
 	{
@@ -386,7 +386,7 @@
 	{
 		position: relative;
 		background: #fff;
-    padding-top: 3em;
+    padding: 2em 0em;
 	}
 	
 	.homepage #content
@@ -453,7 +453,14 @@
 		border-color: rgba(255,255,255,.05);
 		color:  rgba(255,255,255,.1);
 	}
-	
+		
+	#copyright .column
+	{
+    line-height: 1.09rem;
+    padding-bottom: 2.5rem;
+    padding-top: 0.5rem;
+	}
+
 	#copyright a
 	{
     font-size: 0.85rem;
@@ -531,3 +538,13 @@
 			font-size: 1.7rem;
 			line-height: 2.4rem;
 		}	
+
+.column.customers .content > .date {
+	font-size: 0.9rem;
+	color: #999;
+}
+
+.column.customers .content > .text * {
+  padding: 0.3em 0em;
+  font-size: 1rem;
+}
