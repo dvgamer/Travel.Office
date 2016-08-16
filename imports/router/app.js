@@ -46,10 +46,18 @@ FlowRouter.route('/Pricing', {
 });
  
 FlowRouter.route('/Contact-us', {
-  name: 'us',
+  name: 'contact',
   action:function() {
     Session.set('config.title', null);
     BlazeLayout.render('introduce', { panel: 'contact' });
+  }
+});
+ 
+FlowRouter.route('/Terms-Of-Service', {
+  name: 'terms',
+  action:function() {
+    Session.set('config.title', null);
+    BlazeLayout.render('introduce', { panel: 'terms' });
   }
 });
  
