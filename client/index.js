@@ -6,7 +6,7 @@ import '../imports/language';
 import '../imports/layout';
 import '../imports/router';
 
-
+const moment	= require('moment');
 const Q 			= require('q');
 
 let SignalConnected = true;
@@ -15,13 +15,20 @@ const IdSignal = function(){
 	if(SignalConnected != io.connected) {
 		if(io.connected) {
 			// hide preload
+			console.log('io --', io);
 		} else { 
 			// show preload
+			console.log('io -- disconected.');
 		}
 		SignalConnected = io.connected;
 	}
 }
 const ProjectName = 'MidBack Office™';
+
+moment.createFromInputFallback = function(config) {
+  // unreliable string magic, or
+  config._d = new Date(config._i);
+}; 
 
 Meteor.setInterval(IdSignal, 3000);
 
