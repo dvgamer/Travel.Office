@@ -1,42 +1,10 @@
 {
-  "name": "Travox_Mid-BackOffice",
+  "name": "MidBack Office",
   "private": true,
-  "dependencies": {
-    "better-console": "^0.2.4",
-    "body-parser": "^1.15.2",
-    "bufferutil": "^1.2.1",
-    "clipboard": "^1.5.10",
-    "counterpart": "^0.17.2",
-    "del": "^2.2.0",
-    "express": "^4.14.0",
-    "gridfs-stream": "^1.1.1",
-    "map-stream": "0.0.6",
-    "marked": "^0.3.5",
-    "md5": "^2.1.0",
-    "meteor-node-stubs": "^0.2.3",
-    "moment": "^2.13.0",
-    "moment-timezone": "^0.5.5",
-    "mongoose": "^4.4.20",
-    "push.js": "0.0.7",
-    "q": "^1.4.1",
-    "request": "^2.74.0",
-    "socket.io": "^1.4.6",
-    "socket.io-client": "^1.4.6",
-    "utf-8-validate": "^1.2.1"
-  },
+  "dependencies": { },
   "scripts": {
-    "start": "meteor --port 8081"
+    "start": "node app.js"
   },
-  "devDependencies": {
-    "autoprefixer": "^6.3.1"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {
-        "browsers": [
-          "last 2 versions"
-        ]
-      }
-    }
-  }
+  "devDependencies": { },
+  "postcss": { }
 }
